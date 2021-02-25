@@ -5,6 +5,9 @@
 }
 
 header{
+    background-color: lightgreen;
+    height: 70px;
+    text-align: center;
 }
 
 nav{
@@ -16,14 +19,16 @@ aside{
 }
 
 footer{
-    max-width: 130px;
-    height: 30px;
+    display: flexbox;
+    margin: auto;
+    width: 600px;
+    height: 200px;
+    background-color: limegreen;
 
 }
 
 .header{
-    text-align: center;
-    max-width: 350px;
+    max-width: 450px;
     height: 40px;
     display: flex;
     margin: auto;
@@ -34,26 +39,40 @@ footer{
 .footer{
     border: black;
     display: flex;
+    height: 100px;
     margin: auto;
     background-color: magenta;
     font-size: 10px;
 }
 
 .content{
-    background-color: blue;
+    display: flexbox;
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    background-color: lightblue;
     font-size: 14px;
 }
-
-.aside{
-    background-color: blue;
+.article{
+    display: flexbox;
+    margin: auto;
+    width: 600px;
+    height: 200px;
+    background-color: lime;
 }
-
 .nav{
-    background-color: blue;
+    float: left;
+    width: 25%;  
+    height: 440px;  
+    background-color: lightpink;
     font-size: 12px;
 }
 
 .sidebar{
+    top: 50px;
+    float: right;
+    width: 25%;
+    height: 440px;
     font-size: 10px;
     background-color: magenta;
 }
