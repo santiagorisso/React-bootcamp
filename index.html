@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <link href="style.css" rel="stylesheet">
 <html lang="es">
+
 <script>
     function Alerta(){
         alert("esto es una alerta");
     }
+    
+    function GetData(){
+        fetch('http://api.icndb.com/jokes/random')
+            .then(res => res.json())
+            .then(data => {
+                var datosapi;
+                console.log("Segundo")
+                console.log(data)
+                datosapi=data
+                document.querySelector('#hidden').innerText = datosapi.value.joke
+                })       
+    } 
 </script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Topic 1">
@@ -17,11 +31,10 @@
     <section>
         <h1>header of first section</h1>
     </section>
-    <section class="hidden">
+    <section id="hidden">
         hello world!
     </section>
     <section>
-        <button onclick="Alerta()"> push it </button>
+        <button onClick="GetData()"> get data via console </button>
     </section>
-    
 </body>
