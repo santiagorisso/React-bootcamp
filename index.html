@@ -4,7 +4,7 @@
 
 <script>
     function Alerta(){
-        alert("esto es una alerta");
+        alert("esto es una alerta")
     }
     
     function GetData(){
@@ -17,7 +17,45 @@
                 datosapi=data
                 document.querySelector('#hidden').innerText = datosapi.value.joke
                 })       
-    } 
+    }
+     
+    function matrix(){
+        /*let array_tabla= [
+            ["team","win","loss"],
+            ["boca","3","1"]
+        ]
+        let tabla = document.createElement("table");
+        document.getElementById("div.Tabla").appendChild(tabla);
+        tabla.border = 1;
+        array_tabla.map(function (x)){
+                let tr = document.createElement("tr");
+                x.map(function(y)){
+                    let th = document.createElement("th");
+                    th.innerHTML = y;
+                    tr.appendChild(th);
+                };
+                tabla.appenChild(tr);
+        }
+        document.getElementById("div.tabla").appendChild(tabla);*/
+        let array_tabla = [
+            ["team","win", "loss"],
+            ["boca", "3", "0"]
+        ];
+        let tabla = document.createElement("table");
+        tabla.border = (1);
+        array_tabla.map(function(x){
+            let tr = document.createElement("tr");
+            x.map(function(y){
+                let th = document.createElement("th");
+                th.innerHTML = y;
+                tr.appendChild(th);
+            });
+            tabla.appendChild(tr);
+        });
+        document.getElementById("tablita").appendChild(tabla);
+
+    }
+
 </script>
 
 <head>
@@ -36,5 +74,7 @@
     </section>
     <section>
         <button onClick="GetData()"> get data via console </button>
+        <button onClick="matrix()">console log matriz</button>
+        <div id="tablita"></div>
     </section>
 </body>
